@@ -1,0 +1,28 @@
+.google-pay-container {
+    margin: 1rem 0;
+}
+
+.google-pay-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    background: #000;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.google-pay-button:hover {
+    background: #333;
+}
+
+.google-pay-logo {
+    height: 24px;
+    width: auto;
+}

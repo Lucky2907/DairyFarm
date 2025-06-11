@@ -1,0 +1,220 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 48px 0 32px 0;
+    background: #f8fff8;
+    min-height: 70vh;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 480px;
+    /* Reduce if you want more space for image */
+    width: 100%;
+    padding-left: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    background: #fff7cc;
+    color: #b68900;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 999px;
+    padding: 6px 16px;
+    /* Reduced horizontal padding */
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(200, 180, 0, 0.08);
+    width: fit-content;
+    /* Ensures the badge only fits the text */
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 24px 0;
+    letter-spacing: -2px;
+}
+
+.hero-green {
+    color: #18b43a;
+}
+
+.hero-yellow {
+    color: #f7b500;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    color: #444;
+    margin-bottom: 32px;
+    max-width: 90%;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 40px;
+}
+
+.hero-btn {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(30, 64, 175, 0.08);
+}
+
+.hero-btn.primary {
+    background: #18b43a;
+    color: #fff;
+}
+
+.hero-btn.primary:hover {
+    background: #0dca27;
+}
+
+.hero-btn.secondary {
+    background: #fff;
+    color: #18b43a;
+    border: 2px solid #18b43a;
+}
+
+.hero-btn.secondary:hover {
+    background: #eaffea;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 48px;
+    margin-top: 24px;
+}
+
+.stat-number {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #18b43a;
+    margin-bottom: 2px;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #888;
+}
+
+.hero-visual {
+    display: block;
+    position: relative;
+    min-height: 320px;
+}
+
+.hero-visual-mobile {
+    display: none;
+}
+
+.hero-slider-img {
+    opacity: 0;
+    transition: opacity 1s cubic-bezier(.4, 2, .6, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    background: #e8f5e9;
+    display: block;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 32px 0;
+    }
+    .hero-content {
+        padding-left: 24px;
+        max-width: 100%;
+    }
+    .hero-visual {
+        margin: 32px auto 0 auto;
+        min-width: 260px;
+        min-height: 200px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 700px) {
+    .hero-content {
+        align-items: center;
+        text-align: center;
+        padding-left: 0;
+    }
+    .hero-badge {
+        margin-left: auto;
+        margin-right: auto;
+        display: inline-flex;
+    }
+    .hero h1 {
+        text-align: center;
+        margin: 24px 0 0 0;
+        width: 100%;
+        display: block;
+    }
+    .hero-visual {
+        display: none;
+    }
+    .hero-visual-mobile {
+        display: block;
+        position: relative;
+        min-height: 220px;
+        margin-bottom: 18px;
+        width: 100%;
+    }
+    .hero-slider-img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 18px;
+        background: #e8f5e9;
+        display: block;
+    }
+    .hero p {
+        text-align: center;
+        margin: 24px 0 0 0;
+    }
+    .hero-actions {
+        justify-content: center;
+        width: 100%;
+        gap: 16px;
+        margin-top: 24px;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 33.6 px;
+    }
+    .hero-content {
+        padding-left: 8px;
+    }
+    .hero-visual {
+        min-width: 160px;
+        min-height: 120px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
