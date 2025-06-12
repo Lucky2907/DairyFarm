@@ -1,9 +1,27 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
 
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
+  const timeoutRef = useRef(null);
+
+  // Automatically empty cart after 10 minutes (600000 ms)
+  useEffect(() => {
+    if (cart.length === 0) {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
+      }
+      return;
+    }
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(() => {
+      setCart([]);
+      alert('Your cart has been emptied due to inactivity.');
+    }, 600000); // 10 minutes
+    return () => clearTimeout(timeoutRef.current);
+  }, [cart]);
 
   const addToCart = (product, quantity) => {
     setCart(prevCart => {
@@ -61,4 +79,4 @@ export const useCart = () => {
     throw new Error('useCart must be used within a CartProvider');
   }
   return context;
-}; 
+};

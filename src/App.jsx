@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
+import AuthPanel from "./pages/AuthPanel";
 import { CartProvider } from "./contexts/CartContext";
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
               <Route path="/products" element={<Products />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path="/login" element={<AuthPanel />} />
+              <Route path="/register" element={<AuthPanel />} />
               {/* <Route path="/farm-tour" element={<FarmTour />} /> */}
             </Routes>
           </div>

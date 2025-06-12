@@ -186,10 +186,28 @@
 }
 
 
-/* Hide hamburger on desktop */
+/* Show hamburger only on mobile */
 
 .hamburger {
     display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1002;
+    margin-left: auto;
+}
+
+.hamburger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #0eb651;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: 0.3s;
 }
 
 
@@ -201,15 +219,7 @@
         display: none;
     }
     .hamburger {
-        display: block;
-        background: none;
-        border: none;
-        font-size: 2.2rem;
-        color: #179c34;
-        position: absolute;
-        right: 18px;
-        top: 22px;
-        z-index: 999;
+        display: flex;
     }
     .mobile-menu {
         position: fixed;
@@ -277,4 +287,21 @@
     .cart-link {
         display: none;
     }
+}
+
+.logout-btn {
+    background: #d32f2f;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    margin-top: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+.logout-btn:hover {
+    background: #b71c1c;
 }

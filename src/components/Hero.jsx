@@ -23,10 +23,11 @@ function Hero() {
     <section className="hero">
       <div className="hero-content">
         <div className="hero-badge">Family Owned Store Since 1952</div>
+        {/* Mobile images */}
         <div className="hero-visual-mobile">
           {heroImages.map((img, idx) => (
             <img
-              key={img}
+              key={`mobile-${img}`}
               src={img}
               alt="Farm illustration"
               className="hero-slider-img"
@@ -62,10 +63,11 @@ function Hero() {
           </div>
         </div>
       </div>
+      {/* Desktop images */}
       <div className="hero-visual">
         {heroImages.map((img, idx) => (
           <img
-            key={img}
+            key={`desktop-${img}`}
             src={img}
             alt="Farm illustration"
             className="hero-slider-img"
