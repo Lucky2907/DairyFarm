@@ -4,7 +4,7 @@ A modern website for Yogeshwar Dairy, built with React.
 
 ## 🚀 Live Demo
 
-[View Live Demo](v0-farm-zeta.vercel.app)
+[View Live Demo]((http://dairyfarm29.netlify.app))
 
 ## Features
 
